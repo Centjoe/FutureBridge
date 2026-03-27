@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FutureBridge — Explore Careers</title>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/pages.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="logo">Future<span>Bridge</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="explore.html">Explore Careers</a></li>
+      <li><a href="opportunities.html">Opportunities</a></li>
+      <li><a href="stories.html">Stories</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="register.html" class="btn btn-outline">Sign Up</a>
+      <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+    </div>
+  </nav>
+
+  <section class="explore-section">
+    <div class="explore-header">
+      <h2 class="section-title">Explore Career Paths</h2>
+      <p class="section-sub">Find a career that matches your passion and personality</p>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search careers e.g. Agriculture, Coding..." oninput="filterCareers()"/>
+        <button>Search</button>
+      </div>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterByCategory('all', this)">All</button>
+      <button class="filter-tab" onclick="filterByCategory('science', this)">Science</button>
+      <button class="filter-tab" onclick="filterByCategory('tech', this)">Technology</button>
+      <button class="filter-tab" onclick="filterByCategory('arts', this)">Arts & Creative</button>
+      <button class="filter-tab" onclick="filterByCategory('agriculture', this)">Agriculture</button>
+      <button class="filter-tab" onclick="filterByCategory('sports', this)">Sports</button>
+      <button class="filter-tab" onclick="filterByCategory('business', this)">Business</button>
+    </div>
+
+    <!-- CAREERS GRID -->
+    <div class="careers-grid" id="careersGrid">
+
+      <div class="career-card" data-category="agriculture">
+        <div class="emoji">🌾</div>
+        <h3>Agricultural Science</h3>
+        <p>Modern farming, food security, agritech, and sustainable agriculture for Africa's future.</p>
+        <div class="skills">
+          <span class="skill-tag">Biology</span>
+          <span class="skill-tag">Chemistry</span>
+          <span class="skill-tag">Innovation</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="tech">
+        <div class="emoji">💻</div>
+        <h3>Software Engineering</h3>
+        <p>Build apps, websites, and systems that solve real-world problems across Africa and beyond.</p>
+        <div class="skills">
+          <span class="skill-tag">Coding</span>
+          <span class="skill-tag">Math</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="science">
+        <div class="emoji">🔭</div>
+        <h3>Astronomy</h3>
+        <p>Study stars, planets, and the universe. Africa's Square Kilometre Array needs you.</p>
+        <div class="skills">
+          <span class="skill-tag">Physics</span>
+          <span class="skill-tag">Math</span>
+          <span class="skill-tag">Research</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="science">
+        <div class="emoji">🏥</div>
+        <h3>Medicine & Healthcare</h3>
+        <p>Become a doctor, nurse, or public health expert serving communities across Africa.</p>
+        <div class="skills">
+          <span class="skill-tag">Biology</span>
+          <span class="skill-tag">Chemistry</span>
+          <span class="skill-tag">Empathy</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="arts">
+        <div class="emoji">✍️</div>
+        <h3>Writing & Journalism</h3>
+        <p>Tell Africa's stories through books, news, blogs, and digital media.</p>
+        <div class="skills">
+          <span class="skill-tag">Writing</span>
+          <span class="skill-tag">Research</span>
+          <span class="skill-tag">Communication</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="arts">
+        <div class="emoji">🎨</div>
+        <h3>Graphic Design & Art</h3>
+        <p>Create visual identities, illustrations, and digital art for brands and communities.</p>
+        <div class="skills">
+          <span class="skill-tag">Creativity</span>
+          <span class="skill-tag">Design Tools</span>
+          <span class="skill-tag">Visual Thinking</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="sports">
+        <div class="emoji">⚽</div>
+        <h3>Professional Sports</h3>
+        <p>Football, athletics, swimming — build a career doing what you love on the world stage.</p>
+        <div class="skills">
+          <span class="skill-tag">Discipline</span>
+          <span class="skill-tag">Fitness</span>
+          <span class="skill-tag">Teamwork</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="business">
+        <div class="emoji">📊</div>
+        <h3>Business & Entrepreneurship</h3>
+        <p>Start and grow businesses that create jobs and solve problems in your community.</p>
+        <div class="skills">
+          <span class="skill-tag">Leadership</span>
+          <span class="skill-tag">Finance</span>
+          <span class="skill-tag">Strategy</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="science">
+        <div class="emoji">🌍</div>
+        <h3>Environmental Science</h3>
+        <p>Protect Africa's ecosystems, fight climate change, and build a sustainable future.</p>
+        <div class="skills">
+          <span class="skill-tag">Biology</span>
+          <span class="skill-tag">Geography</span>
+          <span class="skill-tag">Research</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="tech">
+        <div class="emoji">🏗️</div>
+        <h3>Engineering</h3>
+        <p>Civil, mechanical, electrical — build the infrastructure Africa needs to grow.</p>
+        <div class="skills">
+          <span class="skill-tag">Math</span>
+          <span class="skill-tag">Physics</span>
+          <span class="skill-tag">Design</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="arts">
+        <div class="emoji">🎵</div>
+        <h3>Music & Performing Arts</h3>
+        <p>Afrobeats, classical, theatre — turn your talent into a thriving creative career.</p>
+        <div class="skills">
+          <span class="skill-tag">Creativity</span>
+          <span class="skill-tag">Performance</span>
+          <span class="skill-tag">Discipline</span>
+        </div>
+      </div>
+
+      <div class="career-card" data-category="business">
+        <div class="emoji">⚖️</div>
+        <h3>Law & Human Rights</h3>
+        <p>Advocate for justice, defend rights, and shape policies that protect communities.</p>
+        <div class="skills">
+          <span class="skill-tag">Critical Thinking</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Research</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 <span>FutureBridge</span> — Empowering Young Minds Across Africa 🌍</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

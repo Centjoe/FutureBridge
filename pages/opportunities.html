@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FutureBridge — Opportunities</title>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/pages.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="logo">Future<span>Bridge</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="explore.html">Explore Careers</a></li>
+      <li><a href="opportunities.html">Opportunities</a></li>
+      <li><a href="stories.html">Stories</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="register.html" class="btn btn-outline">Sign Up</a>
+      <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+    </div>
+  </nav>
+
+  <section class="opportunities-section">
+    <h2 class="section-title">Opportunities for You</h2>
+    <p class="section-sub">Events, scholarships, competitions, and programs — all in one place</p>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterOpp('all', this)">All</button>
+      <button class="filter-tab" onclick="filterOpp('event', this)">Events</button>
+      <button class="filter-tab" onclick="filterOpp('scholarship', this)">Scholarships</button>
+      <button class="filter-tab" onclick="filterOpp('competition', this)">Competitions</button>
+      <button class="filter-tab" onclick="filterOpp('program', this)">Programs</button>
+    </div>
+
+    <div class="opp-grid" id="oppGrid">
+
+      <div class="opp-card" data-type="event">
+        <div class="opp-type">📅 Event</div>
+        <h3>Girls in ICT Day 2025</h3>
+        <p>A global celebration encouraging girls and young women to consider careers in technology.</p>
+        <div class="opp-meta">
+          <span>📍 Dodoma, Tanzania</span>
+          <span>📅 April 24, 2025</span>
+          <span>🎯 Ages 13–20</span>
+        </div>
+        <br/>
+        <a href="#" class="btn btn-primary" style="font-size:0.85rem; padding:8px 18px;">Apply Now</a>
+      </div>
+
+      <div class="opp-card" data-type="scholarship">
+        <div class="opp-type">🎓 Scholarship</div>
+        <h3>African Leadership Academy Scholarship</h3>
+        <p>Full scholarship for exceptional young Africans with leadership potential.</p>
+        <div class="opp-meta">
+          <span>📍 Pan-African</span>
+          <span>📅 Deadline: June 1, 2025</span>
+          <span>🎯 Ages 15–19</span>
+        </div>
+        <br/>
+        <a href="#" class="btn btn-primary" style="font-size:0.85rem; padding:8px 18px;">Apply Now</a>
+      </div>
+
+      <div class="opp-card" data-type="competition">
+        <div class="opp-type">🏆 Competition</div>
+        <h3>Young Innovators Agriculture Challenge</h3>
+        <p>Present your agritech idea and win funding to bring it to life.</p>
+        <div class="opp-meta">
+          <span>📍 East Africa</span>
+          <span>📅 Deadline: May 10, 2025</span>
+          <span>🎯 Ages 14–22</span>
+        </div>
+        <br/>
+        <a href="#" class="btn btn-primary" style="font-size:0.85rem; padding:8px 18px;">Apply Now</a>
+      </div>
+
+      <div class="opp-card" data-type="program">
+        <div class="opp-type">🌱 Program</div>
+        <h3>Tony Elumelu Foundation Youth Entrepreneurship</h3>
+        <p>12-week entrepreneurship training + seed funding for young African entrepreneurs.</p>
+        <div class="opp-meta">
+          <span>📍 Pan-African (Online)</span>
+          <span>📅 Rolling Applications</span>
+          <span>🎯 Ages 18–35</span>
+        </div>
+        <br/>
+        <a href="#" class="btn btn-primary" style="font-size:0.85rem; padding:8px 18px;">Apply Now</a>
+      </div>
+
+      <div class="opp-card" data-type="event">
+        <div class="opp-type">📅 Event</div>
+        <h3>National Science & Technology Fair</h3>
+        <p>Showcase your science project and compete with students across the country.</p>
+        <div class="opp-meta">
+          <span>📍 Dar es Salaam</span>
+          <span>📅 July 15, 2025</span>
+          <span>🎯 Secondary School Students</span>
+        </div>
+        <br/>
+        <a href="#" class="btn btn-primary" style="font-size:0.85rem; padding:8px 18px;">Apply Now</a>
+      </div>
+
+      <div class="opp-card" data-type="scholarship">
+        <div class="opp-type">🎓 Scholarship</div>
+        <h3>Google Generation Scholarship</h3>
+        <p>Supporting underrepresented students pursuing computer science degrees in Africa.</p>
+        <div class="opp-meta">
+          <span>📍 Sub-Saharan Africa</span>
+          <span>📅 Deadline: August 2025</span>
+          <span>🎯 University Applicants</span>
+        </div>
+        <br/>
+        <a href="#" class="btn btn-primary" style="font-size:0.85rem; padding:8px 18px;">Apply Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 <span>FutureBridge</span> — Empowering Young Minds Across Africa 🌍</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
